@@ -1,0 +1,132 @@
+@import url("./fonts.css");
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+}
+
+.all{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+    justify-content: center;
+}
+
+.card{
+    height: 450px;
+    width: 300px;
+    margin: 50px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    border-radius: 40px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card .img{
+    background-color: #fa6f5f;
+    height: 140px;
+}
+
+.text{
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+    justify-content: center;
+}
+
+.text h2{
+    font-weight: 600;
+}
+
+.text h6{
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.icon{
+    height: 130px;
+    margin-top: -65px;
+    border-radius: 50%;
+}
+
+.f-detail{
+    display: flex;
+}
+
+.f{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    margin-left: 0px;
+    border-radius: 20px;
+    width: 85px;
+    padding: 5px;
+}
+
+.f:hover{
+    background: rgb(235, 235, 235);
+}
+
+.f h2{
+    color: #fa6f5f;
+}
+
+ .card button{
+    background: #fa8477;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    border: none;
+    padding:10px 30px;
+    border-radius: 10px;
+}
+
+.card button:hover{
+    background:#fa6f5f;
+}
+
+.link{
+    margin:15px;
+}
+
+.fab{
+    font-size: 25px;
+    color: rgb(58, 58, 58);
+    margin: 5px;
+}
+
+.fab:hover{
+    color: black;
+}
+
+
+.card2 .img{
+    background-color:rgb(1, 167, 167) ;
+}
+
+.card2 .f h2{
+    color:rgb(0, 143, 143) ;
+}
+
+.card2 button{
+    background: rgb(130, 190, 190);
+}
+
+.card2 button:hover{
+    background: rgb(1, 167, 167);
+}
+
+@media only screen and (max-width:830px){
+  .all{
+      flex-direction: column;
+      align-items: center;
+  }
+}
+

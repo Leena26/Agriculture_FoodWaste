@@ -1,0 +1,151 @@
+@import url("./fonts.css");
+*{
+    margin: 0;
+    pad: 0;
+}
+
+body{
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.title{
+    width: 100vw;
+    height: 500px;
+    background-image: url("https://static3.coolconnections.ru/images/11327/standard/hd/e453a14f06dc2b5b4d8503604269cb692d26347a.jpg?1562275758");
+    background-size:cover ;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.title div{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    color: black;
+    background: rgba(255, 255, 255, 0.794);
+    padding: 20px;
+    margin: 30px;
+    padding-right: 0;
+}
+
+.title div p{
+    font-weight: 500;
+}
+
+
+@media only screen and (max-width:540px){
+    .title h1{
+        font-size: 30px;
+    }
+
+    .title p{
+        font-size: 15px;
+    }
+
+    .title div{
+        width: 300px;
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .title div{
+        width: 250px;
+        height: auto;
+    }
+    .title h1{
+        font-size: 25px;
+    }
+
+    .title p{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width:400px){
+    .title div{
+        width: 200px;
+        height: auto;
+    }
+    .title h1{
+        font-size: 22px;
+    }
+
+    .title p{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width:300px){
+    .title div{
+        width: 170px;
+        height: auto;
+    }
+    .title h1{
+        font-size: 20px;
+    }
+
+    .title p{
+        font-size: 15px;
+    }
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.content .cc{
+    display: flex;
+    width: 85vw;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.content .cc img{
+    width: 300px;
+    overflow: hidden;
+    transition: transform 0.7s ease-out;
+}
+
+.content .cc .image{
+    width: 300px;
+    overflow: hidden;
+}
+
+.image img:hover{
+    transform: scale(1.2);
+}
+.content .cc .text{
+    margin: 20px;
+    width: 45%;
+}
+
+.content .cc div:nth-child(odd){
+    margin-left: 0px;
+}
+
+.content .cc:nth-child(even){
+    background: rgb(241, 241, 241);
+}
+
+@media only screen and (max-width:800px){
+    .content .cc{
+        flex-direction: column;
+    }
+
+    .content .cc .text{
+        width: 80%;
+    }
+}
+

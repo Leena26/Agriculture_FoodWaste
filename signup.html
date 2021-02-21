@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./Css/signup.css">
+    <link rel="stylesheet" href="./Css/nav.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+</head>
+<body>
+    <nav>
+        <div class="top">
+            <a style="text-decoration: none; list-style: none; color: black;" href="./index.html"><h2 id="logo"><span>C</span>ode<span>R</span>age</h2></a>
+            <ul>
+                <a href="./index.html">
+                    <li>Home</li>
+                </a>
+
+                <a href="./contact.html">
+                    <li>Contact</li>
+                </a>
+                <a href="./About.html">
+                    <li>About</li>
+                </a>
+            </ul>
+        </div>
+        
+        <div id="hamburger">
+            <input type="checkbox">
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul id="menu">
+                <a id="hidden" href="./index.html">
+                    <li>Home</li>
+                </a>
+                <a href="./plants.html">
+                    <li>Life of Plants</li>
+                </a>
+                <a href="./farm.html">
+                    <li>Farming Challenge</li>
+                </a>
+                <a href="./rich.html">
+                    <li>The Rich Act</li>
+                </a>
+                <a id="hidden" href="./About.html">
+                    <li>About</li>
+                </a>
+                <a id="hidden" href="./contact.html">
+                    <li>Contact</li>
+                </a>
+                
+                <div>
+                    <a href="./login.html"><button>Log In</button></a>
+                </div>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="all">
+        <div class="container" id="container">
+            <div class="form-container sign-up-container">
+                <form action="#">
+                    <h1>Log In</h1>
+                    <div class="social-container">
+                        <a href="#" class="social"><i class="fab fa-google"></i></a>
+                        <a href="#" class="social"><i class="fab fa-github-alt"></i></a>
+                        <a href="#" class="social"><i class="fab fa-codepen"></i></a>
+                    </div>
+                    <span>or use your account</span>
+                    <input type="email" placeholder="Email" />
+                    <input type="password" placeholder="Password" />
+                    <a href="#">Forgot your password?</a>
+                    <a href="./index.html"><button>Log In</button></a>
+                </form> 
+            </div>
+            <div class="form-container sign-in-container">
+                
+                <form action="#">
+                    <h1>Create Account</h1>
+                    <div class="social-container">
+                        <a href="#" class="social"><i class="fab fa-google"></i></a>
+                        <a href="#" class="social"><i class="fab fa-github-alt"></i></a>
+                        <a href="#" class="social"><i class="fab fa-codepen"></i></a>
+                    </div>
+                    <span>or use your email for registration</span>
+                    <input type="text" placeholder="Name" />
+                    <input type="email" placeholder="Email" />
+                    <input type="password" placeholder="Password" />
+                    <a href="./index.html"><button>Sign Up</button></a>
+                </form>
+            </div>
+        
+        
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1>New here?</h1>
+                        <p>Connect with our team! Start by entering some personal details to create an account. </p>
+                        <button class="ghost"id="signIn" >Sign Up</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1>Welcome Back!</h1>
+                        <p>Remeber CodeRage? Log In to store your favorites and many more!</p>
+                        <button class="ghost" id="signUp">Log In</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="other">
+        <h1>Welcome Back!</h1>
+        <p>Remeber CodeRage? Log In to store your favorites and many more! </p>
+        <a href="./login.html"><button class="ghost" id="signUp">Log In</button></a>
+    </div>
+
+
+
+
+<script>
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
+
+    signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+    });
+
+    signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+    });
+</script>
+</body>
+</html>

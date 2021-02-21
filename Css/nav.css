@@ -1,0 +1,369 @@
+@import url("./fonts.css");
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+nav{
+  position: fixed;
+  z-index: 1000;
+}
+
+
+#hamburger{
+  display: block;
+  position: relative;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+  
+}
+
+#hamburger a{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: rgb(51, 51, 51);
+  text-decoration: none;
+  transition: 0.2s color ease;
+  text-decoration: none;
+}
+
+#hamburger a:hover{
+  color: black;
+}
+
+#hamburger input{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+  margin-bottom: 5px;
+  margin-left: 20px;
+  top:20px;
+}
+
+#hamburger span
+{
+  display: block;
+  margin-left: 20px;
+  top:20px;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: rgb(1, 167, 167);
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background-color 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#hamburger span:first-child{
+  transform-origin: 0% 0%;
+}
+
+#hamburger span:nth-last-child(2){
+  transform-origin: 0% 100%;
+}
+
+/*What span shoudl do when checkbox is checked*/
+#hamburger input:checked ~ span{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background:  #fa6f5f;
+  ;
+}
+
+#hamburger input:checked ~ span:nth-last-child(3){
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#hamburger input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: absolute;
+  width: 220px;
+  height: 450px;
+  margin-top: 40px;
+  list-style-type: none;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  background: url(..//Assets/Vegies.png);
+  background-size: 170%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: white;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.144);
+  padding-top: 30px;
+}
+
+#hidden{
+  visibility: hidden;
+  height: 0;
+}
+
+#menu li
+{
+  padding: 4px 0;
+  font-size: 19px;
+  font-weight: 500;
+  margin-left: -30px;
+  padding-top: 10px;
+}
+
+#menu div{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#menu button{
+  font-size: 19px;
+  background-color:white ;
+  color: black;
+  padding: 5px;
+  border: 2px solid #fa6f5f;
+  width: 85px;
+  margin-left: -30px;
+  border-radius: 10px;
+  transition:background-color 0.2s ease ;
+}
+
+#menu button:hover{
+  background-color: #fa6f5f;
+  border:none;
+  color: white;
+  padding: 7px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+
+#hamburger input:checked ~ ul
+{
+  transform: none;
+}
+
+
+/*The other nav bar*/
+.top{
+  display: flex;
+  width: 100vw;
+  height: 60px;
+  background: white;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.144);
+}
+
+.top ul{
+  display: flex;
+}
+
+.top li{
+  font-size: 20px;
+  margin-right:50px;
+  color: black;
+  font-weight: 500;
+}
+
+.top a{
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.top #logo{
+  margin:0 ;
+  margin-left: 70px;
+  font-weight: 600;
+}
+
+.top #logo span{
+  font-weight: 900;
+}
+
+@media only screen and (max-width:630px){
+  .top li{
+    margin-right: 30px;
+  }
+}
+
+@media only screen and (max-width:570px){
+  .top li{
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (max-width:500px){
+  .top ul{
+    opacity: 0;
+  }
+
+  #hidden{
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+  }
+}
+
+/*Footer*/
+
+/*Footer*/
+
+footer{
+  font-family: 'Truculenta', sans-serif;
+  background: black;
+  height:auto;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+footer .first, .second, .third{
+  width: 350px;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.first{
+  border-right: 2px solid white;
+}
+
+.second{
+  margin: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.third{
+  border-left: 2px solid white;
+  padding-left: 20px;
+}
+
+.d{
+  display: flex;
+  width: 65%;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+footer h3{
+  font-size: 23px;
+}
+
+.d h3{
+  padding-right: 10px;
+}
+
+.vl{
+  height: 90%;
+  width: 1px;
+  background: white;
+}
+
+.icon{
+  height: 115px;
+  border-radius: 50%;
+  padding:10px;
+}
+
+footer button{
+  border: none;
+  background: white;
+  border-radius: 20px;
+  padding: 5px;
+  font-size: 18px;
+  font-family: 'Truculenta', sans-serif;
+}
+
+footer h2{
+  font-size: 30px;
+  margin:0 ;
+  font-weight: 421;
+}
+
+footer h2 span{
+  font-weight: 600;
+}
+
+.subscribe{
+  display: flex;
+  
+}
+
+.subscribe input{
+  height: 30px;
+  width: 250px;
+}
+
+.subscribe button{
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: var(--green);
+  transform: background-color 0.3s ease;
+  border-radius: 0px 20px 20px 0px;
+  border: none;
+}
+
+.last{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.last button{
+  width: 80px;
+}
+
+@media only screen and (max-width:1150px){
+  footer{
+      flex-wrap: wrap;
+  }
+
+  .vl{
+      visibility: hidden;
+  }
+
+  .first, .third{
+      border-right:none ;
+      border-left: none;
+  }
+
+}
+
+@media only screen and (max-width:425px){
+  .first h3{
+      font-size: 20px;
+  }
+
+  .icon{
+      height: 100px;
+  }
+}
+

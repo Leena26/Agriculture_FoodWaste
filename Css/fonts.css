@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap');
+/*Montserrat regular 400   font-family: 'Montserrat', sans-serif;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+/*Montserrat super bold   font-family: 'Montserrat', sans-serif;  bold 900*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Truculenta:wdth,wght@100,200;100,300;100,400;100,500;100,600;105.2,421&display=swap');
+/*Truculenta --- own weight:421, width:105.2*/
+:root{
+    --green: rgb(1, 167, 167);
+    --pink:#fa6f5f;
+}
